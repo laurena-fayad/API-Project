@@ -125,10 +125,17 @@ h3{
     margin-top: 3em;
 }
 
+.btn:hover:not(:disabled){
+    filter: brightness(1.5);
+}
+
 .clr{
     background-color: rgb(255, 255, 255);
     color: black
+}
 
+.clr:hover:not(:disabled){
+    filter: brightness(0.9);
 }
 
 #footer{
