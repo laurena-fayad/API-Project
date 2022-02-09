@@ -17,6 +17,12 @@ body{
 
 .header{
     color: #fbf7ea;
+    text-align: center;
+}
+
+.wrap{
+    display: flex;
+    flex-direction: column;
 }
 
 input{
@@ -31,6 +37,18 @@ input{
     margin-left: 0.5em;
 }
 
+#operand1{
+    max-width: 10%
+}
+
+#operand2{
+    max-width: 10%
+}
+
+label{
+    margin-left: 3%
+}
+
 h2{
     text-transform: uppercase;
 }
@@ -41,7 +59,7 @@ h3{
 
 .container{
     margin: 0% auto;
-    width: 80%;
+    width: 95vw;
 }
 
 .split{
@@ -53,28 +71,42 @@ h3{
     flex-basis: 100%;
 }
 
+.section-title{
+    margin-bottom: 2em;
+}
+
 .math-fx{
     background-color: var(--clr-purple);
-    padding: 4rem 0;
     border-radius: 50px 0 0 0px;
+    max-height: 40vh;
+    max-height: 100%;
+    max-width: 100%;
 }
 
 .palindrome-fx{
     background-color: var(--clr-lightyellow);
-    padding: 4rem 0;
     border-radius: 0 50px 0 0;
+    max-height: 40vh;
+    max-height: 100%;
+    max-width: 100%;
+
 }
 
 .string-cleaner-fx{
     background-color: var(--clr-pink);
-    padding: 4rem 0;
     border-radius: 0 0 0 50px;
+    max-height: 40vh;
+    max-height: 100%;
+    max-width: 100%;
+
 }
 
 .password-fx{
     background-color: var(--clr-darkyellow);
-    padding: 4rem 0;
     border-radius: 0 0 50px 0;
+    max-height: 40vh;
+    max-height: 100%;
+    max-width: 100%;
 }
 
 .btn{
@@ -83,18 +115,20 @@ h3{
     border-radius: 16px;
     display: inline-block;
     font-family: 'Poppins', sans-serif;
-    font-size: 15px;
+    font-size: 12px;
     font-weight: 300;
     padding: 13px 16px;
     text-align: center;
     text-transform: uppercase;
-    width: 35%;
+    width: fit-content;
     color: #fbf7ea;
     margin-top: 3em;
 }
 
-.btn:hover:not(:disabled){
-    filter: brightness(1.5);
+.clr{
+    background-color: rgb(255, 255, 255);
+    color: black
+
 }
 
 #footer{

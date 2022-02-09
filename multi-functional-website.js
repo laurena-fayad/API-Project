@@ -15,7 +15,6 @@ function show(data, pProperty) {
 
     if(pProperty == "math"){
         result = `${data.result}`
-        console.log(`${data.result}`)
         document.getElementById("math-result").innerHTML = result    
     }else if (pProperty == "palindrome"){
         result = `${data.result}`
@@ -23,14 +22,12 @@ function show(data, pProperty) {
     }else if(pProperty == "str-cleanup"){
         result = `${data.trimmed_string}`
         document.getElementById("cleanup-result").innerHTML = result  
-    }else if(pProperty == "password"){
+    }else if(pProperty == "password"){    
         result = `${data.result}`
         hash = `${data.pw_hash}`
         error = `${data.error}`
         document.getElementById("password-result").innerHTML = result 
-        if (result == "Password approved"){
-            document.getElementById("hash-result").innerHTML = "Hash: " + hash 
-        }else{
+        if (result == "Password rejected"){
             document.getElementById("error").innerHTML = "Error: " + error 
         }
     }
@@ -63,4 +60,26 @@ document.getElementById("password-btn").addEventListener("click", function(){
     property = 'password'
     let password_api = "http://localhost/api-project/password-validator.php/?password=" + pw_input
     getapi(password_api, property);  
+})
+
+document.getElementById("math-clr").addEventListener("click", function(){
+    document.getElementById("operand1").value = ""
+    document.getElementById("operand2").value = ""
+    document.getElementById("math-result").innerHTML =""
+})
+
+document.getElementById("pal-clr").addEventListener("click", function(){
+    document.getElementById("palindrome-string").value = ""
+    document.getElementById("palindrome-result").innerHTML =""
+})
+
+document.getElementById("str-clr").addEventListener("click", function(){
+    document.getElementById("string-cleanup").value = ""
+    document.getElementById("cleanup-result").innerHTML = ""  
+})
+
+document.getElementById("pw-clr").addEventListener("click", function(){
+    document.getElementById("password-result").innerHTML = ""
+    document.getElementById("error").innerHTML = ""
+    document.getElementById("password-input").value = ""
 })
