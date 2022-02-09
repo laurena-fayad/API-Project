@@ -9,49 +9,56 @@
 </head>
 <body>
     
-    <div class="container">
-        <div class="header">
-            <h1> Multi-functional Website </h1>
-        </div>
+    <div class="header">
+        <h1> Multi-functional Website </h1>
+    </div>
 
+    <div class="container">
         <div class="split">
             <div class="math-fx">
                 <h2> Math Equation</h2>
-                <h3> Given x and y, this function calculates: 2 * x + y % 2.</h2>
-                <label for="operand1">Enter the first value</label>
-                <input type="number" id="operand1" name="operand1">
-                <label for="operand2">Enter the second value</label>
-                <input type="number" id="operand2" name="operand2">
-                <a href="#"><button type="button" id="calculate-btn">Calculate</button></a>
-                <h4 class="result"> Result = <span id="math-result"> </span></h4>  
+                <h3> Given x and y, calculate (2 * x + y % 2)</h2>
+                <label for="operand1">Enter X</label>
+                <input type="number" id="operand1" name="operand1"> <br/>
+                <label for="operand2">Enter Y</label>
+                <input type="number" id="operand2" name="operand2"><br/>
+                <a href="#"><button type="button" class="btn" id="calculate-btn">Calculate</button></a>
+                <h4 class="result"> <span id="math-result"> </span></h4>  
             </div>
     
             <div class="palindrome-fx">
                 <h2> Palindrome Checker</h2>
-                <h3> Given a string, this function checks if it is a palindrome or not (reads the same backward or forward).</h2>
+                <h3> Check if a string is a palindrome</h2>
                 <label for="palindrome-string">Enter a string</label>
-                <input type="text" id="palindrome-string" name="palindrome-string">
-                <a href="#"><button type="button" id="palindrome-btn">Check if palindrome</button></a> 
-                <h4 class="result"> Result = <span id="palindrome-result"> </span></h4>   
+                <input type="text" id="palindrome-string" name="palindrome-string"><br/>
+                <a href="#"><button type="button" class="btn" id="palindrome-btn">Check if palindrome</button></a> 
+                <h4 class="result"><span id="palindrome-result"> </span></h4>   
             </div>    
         </div>
 
-        <div class="string-cleaner-fx">
-            <h2> String Cleanup</h2>
-            <h3> Given a string, this function removes all the extra spaces for a cleaner output.</h2>
-            <label for="string-cleanup">Enter a string</label>
-            <input type="text" id="string-cleanup" name="string-cleanup">
-            <a href="#"><button type="button" id="cleanup-btn">Cleanup string</button></a>  
-            <h4 class="result"> Result = <span id="cleanup-result"> </span></h4>  
+        <div class="split">
+            <div class="string-cleaner-fx">
+                <h2> String Cleanup</h2>
+                <h3> Remove extra spaces from a string for a cleaner output</h2>
+                <label for="string-cleanup">Enter a string</label>
+                <input type="text" id="string-cleanup" name="string-cleanup"><br/>
+                <a href="#"><button type="button" class="btn" id="cleanup-btn">Cleanup string</button></a>  
+                <h4 class="result"><span id="cleanup-result"> </span></h4>  
+            </div>
+    
+            <div class="password-fx">
+                <h2> Password Validator</h2>
+                <h3> Validate if password's length is >8 & contains letters and numbers</h2>
+                <label for="password-input">Enter a password</label>
+                <input type="text" id="password-input" name="password-input"><br/>
+                <a href="#"><button type="button" class="btn" id="password-btn">Validate Password</button></a>
+                <h4 class="result"><span id="password-result"> </span></h4>
+                <h5> <span id="hash-result"> </span></h5>  
+                <h5> <span id="error"></span></h5>  
+            </div>    
         </div>
-
-        <div class="password-fx">
-            <h2> Password Validator</h2>
-            <h3> Given a password, this function validates if it's at least 8 characters and contains both letters and numbers.</h2>
-            <label for="password-input">Enter a password</label>
-            <input type="text" id="password-input" name="password-input">
-            <a href="#"><button type="button" id="password-btn">Validate Password</button></a>  
-            <h4 class="result"> Result = <span id="password-result"> </span></h4>  
+        <div id="footer">
+            <p id="copyright">© Copyright 2022 SEF</p>
         </div>
     </div>
     <script src="multi-functional-website.js"></script>

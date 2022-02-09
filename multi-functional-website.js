@@ -27,7 +27,12 @@ function show(data, pProperty) {
         result = `${data.result}`
         hash = `${data.pw_hash}`
         error = `${data.error}`
-        document.getElementById("password-result").innerHTML = result + " hash = " + hash + "error = " + error
+        document.getElementById("password-result").innerHTML = result 
+        if (result == "Password approved"){
+            document.getElementById("hash-result").innerHTML = "Hash: " + hash 
+        }else{
+            document.getElementById("error").innerHTML = "Error: " + error 
+        }
     }
 }
  

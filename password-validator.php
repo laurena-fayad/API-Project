@@ -1,5 +1,6 @@
 <?php
 //API 4
+header("Access-Control-Allow-Origin: *");
 $error;
 $result;
 $hashed_pw;
@@ -11,15 +12,15 @@ $numbers_check = preg_match('/\d/', $password);
 if (($pw_length >= 8) && $letters_check && $numbers_check){
     $hashed_pw = hash("sha256", $password);
     $error = "none";
-    $result = "approved";
+    $result = "Password approved";
 }else if($pw_length<8){
     $hashed_pw = " ";
     $error = "Password must be at least 8 characters.";
-    $result = "rejected";
+    $result = "Password rejected";
 }elseif(!$letters_check || !$numbers_check){
     $hashed_pw = " ";
     $error = "Password must contain both letters and numbers.";
-    $result = "rejected";
+    $result = "Password rejected";
 }
 
 $array = ["pw_hash" => $hashed_pw, "result" =>$result, "error" =>$error];

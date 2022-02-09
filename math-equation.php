@@ -1,5 +1,6 @@
 <?php
 
+header("Access-Control-Allow-Origin: *");
 //API 1
 $operand1 = $_GET["operand1"];
 $operand2 = $_GET["operand2"];
