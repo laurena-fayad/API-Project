@@ -14,22 +14,26 @@
             <h1> Multi-functional Website </h1>
         </div>
 
-        <div class="math-fx">
-            <h2> Math Equation</h2>
-            <h3> Given x and y, this function calculates: 2 * x + y % 2.</h2>
-            <label for="operand1">Enter the first value</label>
-            <input type="number" id="operand1" name="operand1">
-            <label for="operand2">Enter the second value</label>
-            <input type="number" id="operand2" name="operand2">
-            <a href="#"><button type="button" id="calculate-btn">Calculate</button></a>  
-        </div>
-
-        <div class="palindrome-fx">
-            <h2> Palindrome Checker</h2>
-            <h3> Given a string, this function checks if it is a palindrome or not (reads the same backward or forward).</h2>
-            <label for="palindrome-string">Enter a string</label>
-            <input type="text" id="palindrome-string" name="palindrome-string">
-            <a href="#"><button type="button" id="palindrome-btn">Check if palindrome</button></a>  
+        <div class="split">
+            <div class="math-fx">
+                <h2> Math Equation</h2>
+                <h3> Given x and y, this function calculates: 2 * x + y % 2.</h2>
+                <label for="operand1">Enter the first value</label>
+                <input type="number" id="operand1" name="operand1">
+                <label for="operand2">Enter the second value</label>
+                <input type="number" id="operand2" name="operand2">
+                <a href="#"><button type="button" id="calculate-btn">Calculate</button></a>
+                <h4 class="result"> Result = <span id="math-result"> </span></h4>  
+            </div>
+    
+            <div class="palindrome-fx">
+                <h2> Palindrome Checker</h2>
+                <h3> Given a string, this function checks if it is a palindrome or not (reads the same backward or forward).</h2>
+                <label for="palindrome-string">Enter a string</label>
+                <input type="text" id="palindrome-string" name="palindrome-string">
+                <a href="#"><button type="button" id="palindrome-btn">Check if palindrome</button></a> 
+                <h4 class="result"> Result = <span id="palindrome-result"> </span></h4>   
+            </div>    
         </div>
 
         <div class="string-cleaner-fx">
@@ -38,15 +42,18 @@
             <label for="string-cleanup">Enter a string</label>
             <input type="text" id="string-cleanup" name="string-cleanup">
             <a href="#"><button type="button" id="cleanup-btn">Cleanup string</button></a>  
+            <h4 class="result"> Result = <span id="cleanup-result"> </span></h4>  
         </div>
 
         <div class="password-fx">
             <h2> Password Validator</h2>
             <h3> Given a password, this function validates if it's at least 8 characters and contains both letters and numbers.</h2>
-            <label for="password-input">Enter a string</label>
+            <label for="password-input">Enter a password</label>
             <input type="text" id="password-input" name="password-input">
             <a href="#"><button type="button" id="password-btn">Validate Password</button></a>  
+            <h4 class="result"> Result = <span id="password-result"> </span></h4>  
         </div>
     </div>
+    <script src="multi-functional-website.js"></script>
 </body>
 </html>
