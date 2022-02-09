@@ -13,15 +13,19 @@ async function getapi(url, pProperty) {
 // Function to display fetched data
 function show(data, pProperty) {
 
+    //Math equation results
     if(pProperty == "math"){
         result = `${data.result}`
-        document.getElementById("math-result").innerHTML = result    
+        document.getElementById("math-result").innerHTML = result 
+        //Palindrome results   
     }else if (pProperty == "palindrome"){
         result = `${data.result}`
         document.getElementById("palindrome-result").innerHTML = result  
+        //Str cleanup results  
     }else if(pProperty == "str-cleanup"){
         result = `${data.trimmed_string}`
-        document.getElementById("cleanup-result").innerHTML = result  
+        document.getElementById("cleanup-result").innerHTML = result
+        //Password validation results    
     }else if(pProperty == "password"){    
         result = `${data.result}`
         hash = `${data.pw_hash}`
@@ -33,6 +37,7 @@ function show(data, pProperty) {
     }
 }
  
+//Calling corresponding APIs URLS based on user input
 document.getElementById("calculate-btn").addEventListener("click", function(){
     let operand1 = document.getElementById("operand1").value
     let operand2 = document.getElementById("operand2").value
@@ -62,6 +67,7 @@ document.getElementById("password-btn").addEventListener("click", function(){
     getapi(password_api, property);  
 })
 
+//Clearing input and result values upon 'Clear' click
 document.getElementById("math-clr").addEventListener("click", function(){
     document.getElementById("operand1").value = ""
     document.getElementById("operand2").value = ""
