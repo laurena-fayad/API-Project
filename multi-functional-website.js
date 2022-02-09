@@ -37,28 +37,28 @@ document.getElementById("calculate-btn").addEventListener("click", function(){
     let operand1 = document.getElementById("operand1").value
     let operand2 = document.getElementById("operand2").value
     property = 'math'
-    let math_api = "http://localhost/api-project/math-equation.php/?operand1=" + operand1 + "&operand2=" + operand2
+    let math_api = "http://localhost/api-project/PHP/math-equation.php/?operand1=" + operand1 + "&operand2=" + operand2
     getapi(math_api, property);  
 })
 
 document.getElementById("palindrome-btn").addEventListener("click", function(){
     let string_input_pal = document.getElementById("palindrome-string").value
     property = 'palindrome'
-    let palindrome_api = "http://localhost/api-project/palindrome-checker.php/?string=" + string_input_pal
+    let palindrome_api = "http://localhost/api-project/PHP/palindrome-checker.php/?string=" + string_input_pal
     getapi(palindrome_api, property);  
 })
 
 document.getElementById("cleanup-btn").addEventListener("click", function(){
     let string_input_spaced = document.getElementById("string-cleanup").value
     property = 'str-cleanup'
-    let string_cleaner_api = "http://localhost/api-project/string-cleaner.php/?string=" + string_input_spaced
+    let string_cleaner_api = "http://localhost/api-project/PHP/string-cleaner.php/?string=" + string_input_spaced
     getapi(string_cleaner_api, property);  
 })
 
 document.getElementById("password-btn").addEventListener("click", function(){
     let pw_input = document.getElementById("password-input").value
     property = 'password'
-    let password_api = "http://localhost/api-project/password-validator.php/?password=" + pw_input
+    let password_api = "http://localhost/api-project/PHP/password-validator.php/?password=" + pw_input
     getapi(password_api, property);  
 })
 
